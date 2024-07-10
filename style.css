@@ -1,0 +1,154 @@
+.ibm-plex-sans-arabic-thin {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-arabic-extralight {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-arabic-light {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-arabic-regular {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-arabic-medium {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-arabic-semibold {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-arabic-bold {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  *
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+  }
+
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f1f1f1;
+    }
+
+    .container
+    {
+        margin: 0 40px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    .container h1 
+    {
+        color: #333;
+
+    }
+    .container .tab
+    {
+        position: relative;
+        background: #fff;
+        padding: 0 20px 20px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .container .tab input 
+    {
+
+    appearance: none;    
+    }
+
+    .container .tab label
+{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .tab label::after
+{
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: rgba(0, 0, 0,0.1);
+    transition: transform 1s;
+}
+.container .tab:hover label::after
+{
+    color: #333;
+}
+.container .tab input:checked ~ label::after
+{
+    transform: rotate(135deg);
+}
+.container .tab label h2 
+{
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.25em;
+    border-radius: 9px;
+    margin-right: 10px;
+}
+.container .tab:nth-child(1) label h2
+{
+    background: linear-gradient(135);
+}
+.container .tab label h3 
+{
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    z-index: 10;
+}
+.container .tab .content
+{
+    max-height: 0;
+    transition: 01s;
+    overflow: hidden;
+}
+.container .tab input:checked ~ .content 
+{
+    max-height: 100vh;
+
+}
+.container .tab .content p 
+
+{
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+    z-index: 10;
+}
+.container .tab label h2 
